@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cors()); // Разрешает запросы с любого источника (для разработки и тестирования)
+app.use(cors({ origin: 'https://ivansytnik.github.io' })); // Укажите конкретный origin
 
 const PORT = process.env.PORT || 3000;
 
